@@ -56,19 +56,20 @@ let autoPlay = setInterval(() => {
 }, 3000);
 
 // home page end
+
 //branding video
-var tl = gsap.timeline({scrollTrigger:{
-    trigger:"#main",
-    // markers:true,
-    start:"50% 50%",
-    end:"80% 50%",
-    scrub:5,
-    duration: 1,
-    pin:true,
-  }});
-  tl
-  .to(".branding-video video",{
-    width: "70%",
+// var tl = gsap.timeline({scrollTrigger:{
+//     trigger:"#main",
+//     // markers:true,
+//     start:"50% 50%",
+//     end:"80% 50%",
+//     scrub:5,
+//     duration: 1,
+//     pin:true,
+//   }});
+//   tl
+//   .to(".branding-video video",{
+//     width: "70%",
     
-  })
+//   })
 //   branding video end

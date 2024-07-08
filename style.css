@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     list-style: none;
   
@@ -38,9 +38,19 @@ body{
     width: auto;
     
 }
+
 @keyframes slideUp {
     from { transform: translateY(0); }
     to { transform: translateY(-110vh); } 
+  }
+
+  @media (max-width:700px) {
+    #bgvideo {
+        height: 70vh;
+        width: auto;
+        
+    }
+    
   }
 
   /* @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
@@ -70,7 +80,7 @@ body{
   }
   header nav a{
       color: #0e382c;
-      
+      font-size: 1.2vw;
       font-weight: 400;
   }
   header nav ul{
@@ -79,7 +89,7 @@ body{
       justify-content: end;
       align-items: center;
       gap: 60px;
-      padding-right: 30px;
+      /* padding-right: 30px; */
   }
   header nav{
       border-left: 1px solid var(--border-color);
@@ -139,12 +149,12 @@ body{
       padding: 150px 20px  20px 80px;
   }
   .carousel .list .item .main-content .content h2{
-      font-size: 5em;
+      font-size: 3em;
       /* font-family: 'Aboreto'; */
   }
   .carousel .list .item .main-content .content .price{
       /* font-family: 'Aboreto'; */
-      font-size: 3em;
+      font-size: 2em;
       margin: 20px 0;
   }
   .carousel .list .item .main-content .content .addToCard{
@@ -264,6 +274,19 @@ body{
   .prev .list .item.other_2 .main-content{
       opacity: 0;
   }
+  @media (max-width:700px) {
+    header nav a{
+        color: #0e382c;
+        font-size: 3.5vw;
+        font-weight: 400;
+    }
+    header nav ul{
+        
+        
+        gap: 25px;
+        padding-left: 30px;
+    }
+}
   @media screen and (max-width: 1023px){
       :root{
           --calculate: 1;
@@ -278,6 +301,11 @@ body{
           width: 100%;
           left: 0;
           justify-content: center;
+          
+      }
+      .carousel .list .item .image img{
+        width: 80%;
+        height: auto;
       }
       .carousel .list .item .image figcaption{
           color: #fff;
@@ -315,7 +343,33 @@ body{
     color: #fff;
     margin: 5px;
 }
+
+@media (max-width:700px) {
+    
+    .bar{
+        /* height: 110px; */
+        display: flex;
+        flex-direction: column;
+        
+        h2{
+            padding-top: 7px;
+        }
+        
+    }
+    #bar-button{
+        height: 40px;
+        width: 112px;
+        border-radius: 8%;
+        margin-bottom: 10px;
+    }
+    
+}
+
+
 /* Handcraft curations */
+
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -363,6 +417,26 @@ body{
 }
 
 
+@media (max-width:900px) {
+    
+    .container{
+        height: 210vh;
+        padding-top: 30px;
+    }
+    .curations{
+       padding-top: 40px;
+       gap: 60px;
+       display: flex;
+       flex-direction: column;
+
+       h1{
+        text-align: center;
+       }
+    }
+   
+    
+}
+
 /* Handcraft curations end*/
 
 
@@ -384,8 +458,9 @@ body{
     font-weight: 800;
     color: #17624d;
     margin-bottom: 20px;
-    align-self: flex-start;
-    margin-left: 200px;
+    /* align-self: flex-start; */
+    /* margin-left: 50px; */
+    text-align: center;
 }
 
 #menu-container {
@@ -459,14 +534,14 @@ body{
 .card-description {
     font-size: 0.9em;
     color: #09261ec8;
-    /* font-weight: 900; */
+    font-weight: 900;
 }
 
 .card-info {
     margin-top: 10px;
     font-size: 0.8em;
     color:#0d5541f0;
-    /* font-weight: 600; */
+    font-weight: 600;
 }
 
 
@@ -475,6 +550,7 @@ body{
 @media (max-width: 992px) {
     #card-container{
         flex-direction: column;
+        
     }
     .card{
         width: 200px;
@@ -483,35 +559,61 @@ body{
     #main-menu{
         height: auto;
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     h1{
-        font-size: 4vw;
+        padding-top: 50px;
+        font-size: 6vw;
+    
     }
     
 }
 /* menu end */
 
   /* branding video */
+  
   .branding-video {
-    height: 100%;
     position: relative;
     width: 100%;
+    /* margin-left: 10%; */
     padding: 100px 0;
     background-color: #D2D2D2;
     border-radius: 40px;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-
-
-.branding-video video{
-  
-    width: 40%;
+.branding-video video {
+    width: 70%;
     height: auto;
-    margin-top: 4vw;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+    display: block;
     border-radius: 20px;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 17vw;
+    /* left: 0;
+    right: 0; */
+    height: 20%;
+    width: 70%;
+    /* background-color: rgba(0, 0, 0, 0.3);  */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 3vw;
+    /* backdrop-filter: blur(2px);  */
+}
+
+.video-overlay h1 {
+    font-size: 2vw;
+    margin: 0;
+    color: #fff;
 }
 
 
@@ -519,14 +621,39 @@ body{
 
     .branding-video {
         height: 50vh;
+        padding: 0px 0;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .branding-video h1{
+        padding: 0;
     }
 
     .branding-video video{
         width: 70%;
-        margin-top: 25vw;
+        margin-top: 2vw;
     }
-
-
+    .video-overlay h1 {
+        font-size: 3vw;
+        
+    }
+    .video-overlay p {
+        font-size: 2vw;
+        margin: 0;
+        color: #fff;
+    }
+    .branding-video video {
+        width: 90%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+    .video-overlay {
+        width: 90%;
+        height: 70px;
+        bottom: 20vw;
+    }
 }
 
  
@@ -538,6 +665,7 @@ body{
 /* FOOTER */
 
 footer{
+    /* margin-top: 6px; */
     height: auto;
     width: 100%;
     background-color: #0e382c;
